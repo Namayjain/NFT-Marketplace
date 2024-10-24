@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+  
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px 0; /* Adjusted padding to control vertical spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-family: 'Inter', sans-serif;
+  position: fixed; /* Fix the header to the top */
+  top: 0;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  overflow: hidden; /* To clip the glowing effect */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding only to the left and right */
+  width: 100%; /* Ensure the container spans the entire width */
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+
+.title {
+  
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  margin-left: 0; /* No extra margin */
+  flex: 1; /* Ensure it stays aligned to the left */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title:hover {
+  color: #ffeb3b; /* Change color on hover */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.navLinks li {
+  margin: 0 20px; /* Equal padding between nav items */
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: 'Inter', sans-serif; /* Ensure links use the same font */
+}
+
+.link:hover {
+  color: #ffeb3b; /* Highlight color on hover */
+}
+
+.ctaBtn {
+  background-color: #ff3f20; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 30px; /* Increased button size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.ctaBtn:hover {
+  color: #fcfcfc;
+  background-color: #cd0505; /* Darker shade on hover */
+  transform: translateY(-2px);
+}
+
+.ctaBtn:active {
+  transform: translateY(1px);
+}
+
+.activebtn {
+  background-color: #4caf50; /* Green when connected */
+}
+
+.inactivebtn {
+  color: black;
+  background-color: #fcfcfc; /* Red when not connected */
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+.main-section img {
+  max-width: 400px; /* Adjust to ensure images aren't too big */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 40px; /* Added space between content */
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* Spacing between buttons */
+}
+
+/* NEW CLASS TO PUSH MAIN CONTENT DOWN */
+.main-content {
+  margin-top: 100px; /* Adjust this value based on the height of your header */
+}

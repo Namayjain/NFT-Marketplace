@@ -1,0 +1,41 @@
+.footer {
+  height: 190px;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.titleContainer {
+  margin-bottom: 20px;
+}
+
+.navLinks {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000203;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.socialLink img {
+  width: 24px;
+  height: 24px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6c757d;
+}

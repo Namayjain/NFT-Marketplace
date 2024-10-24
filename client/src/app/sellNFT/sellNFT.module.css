@@ -1,0 +1,176 @@
+/* Container and Inner Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Prevents overflow from video */
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  z-index: -1; /* Send the video to the back */
+  filter: blur(60%); /* Apply blur effect */
+  animation: slow-motion 20s linear infinite; /* Slow down the video */
+}
+
+@keyframes slow-motion {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.innerContainer {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+}
+
+/* Form Wrapper */
+.FormWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Styles */
+.Form {
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.8); /* Slight transparency for better visibility */
+  width: 100%; /* Make the form responsive */
+  padding: 40px; /* Increased padding */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+}
+
+/* Form Content */
+.FormContent {
+  display: flex;
+  flex-direction: column; /* Ensures the label and input are stacked */
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.Input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  width: 100%; /* Ensure input takes full width of its container */
+  box-sizing: border-box; /* Prevents width issues */
+}
+
+.TextArea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* File Upload Styling */
+.fileUploadWrapper {
+  position: relative;
+  width: 100%; /* Ensures full width */
+}
+
+.fileUploadInput {
+  display: none; /* Hide the actual file input */
+}
+
+.fileUploadButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  border: 2px dashed #666;
+  color: white;
+  border-radius: 12px;
+  padding: 12px; /* Increased padding */
+  width: 100%; /* Full width button */
+  font-size: 18px; /* Increased font size */
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.fileUploadButton:hover {
+  border-color: #4B86F7;
+}
+
+/* Label Styling */
+.Label {
+  text-align: start;
+  margin-bottom: 10px;
+  font-size: 16px; /* Increased font size */
+  font-weight: bold;
+  color: #e6e6e6;
+}
+
+/* Message Styling */
+.msg {
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Button Styling */
+.btn {
+  border: none;
+  border-radius: 9px;
+  width: 100%; /* Full width button */
+  margin-top: 20px; /* Increased margin */
+  font-size: 20px; /* Increased font size */
+  font-weight: 700;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inactivebtn {
+  background-color: #888;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.activebtn {
+  background-color: #4B86F7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.activebtn:hover {
+  background-color: #5C9EFD;
+}
+
+.spinner {
+  display: inline-block;
+  border: 4px solid #aaa;
+  border-left-color: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

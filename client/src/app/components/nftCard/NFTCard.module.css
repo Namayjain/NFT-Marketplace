@@ -1,0 +1,71 @@
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 70%; /* Maintain aspect ratio */
+  margin: 10px; /* Add consistent spacing between the cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visuals */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover {
+  transform: scale(1.05); /* Add zoom effect on hover */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.tile:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text {
+  color: #ffffff;
+}
+
+.text strong {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.text p {
+  font-size: 1rem;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 3em;
+  display: -webkit-box;
+   /* -webkit-line-clamp: 2; Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.tile:hover {
+  transform: translateY(-10px); /* Slight hover effect for the whole card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance hover shadow */
+}
