@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.copyright}>
-        &copy; {new Date().getFullYear()} NFT Marketplace. All rights reserved.
+        &copy; {new Date().getFullYear()} Picasso Palette. All rights reserved.
       </div>
     </footer>
   );

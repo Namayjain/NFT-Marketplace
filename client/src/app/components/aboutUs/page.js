@@ -19,7 +19,7 @@ export default function About() {
           Welcome to the future of digital assets! Our NFT marketplace is where creativity meets blockchain technology, providing a platform for artists, collectors, and enthusiasts to buy, sell, and trade unique digital items.
         </p>
         <p className={styles.description}>
-          We offer a seamless experience, combining cutting-edge tech with an intuitive user interface. Whether you're here to discover exclusive art or showcase your own, our marketplace is designed to be accessible and secure for all.
+          We offer a seamless experience, combining cutting-edge tech with an intuitive user interface. Whether you want to discover exclusive art or showcase your own, our marketplace is designed to be accessible and secure for all.
         </p>
       </div>
     </div>

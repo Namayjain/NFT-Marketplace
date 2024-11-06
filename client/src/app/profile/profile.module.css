@@ -38,7 +38,7 @@
 }
 
 .walletIcon {
-  color: #6366f1;
+  color: #ffffff;
 }
 
 .title {
@@ -64,16 +64,17 @@
 
 .copyButton {
   padding: 0.25rem 0.75rem;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  color: #6366f1;
+  color: #f8f8f8;
   font-size: 0.75rem;
   transition: all 0.2s;
 }
 
 .copyButton:hover {
-  background: rgba(99, 102, 241, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .statsContainer {
@@ -99,12 +100,12 @@
 }
 
 .statIcon {
-  color: #6366f1;
+  color: #ffffff;
 }
 
 .ethIcon {
   font-size: 1.5rem;
-  color: #6366f1;
+  color: #fbfbfb;
   font-weight: bold;
 }
 
@@ -148,7 +149,7 @@
 
 .loadingSpinner {
   animation: spin 1s linear infinite;
-  color: #6366f1;
+  color: #fcfcfc;
 }
 
 .emptyState {
@@ -198,22 +199,44 @@
   .innerContainer {
     padding: 1rem;
   }
-  
+
   .content {
     padding: 1.5rem;
   }
-  
+
   .profileHeader {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
-  
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .avatarContainer {
+    width: 56px;
+    height: 56px;
+  }
+
   .addressContainer {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .statsContainer {
     grid-template-columns: 1fr;
+  }
+
+  .nftGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statValue {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
   }
 }

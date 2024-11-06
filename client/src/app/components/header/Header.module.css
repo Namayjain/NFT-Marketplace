@@ -1,47 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 .header {
-  
-  background: #000; /* Black background */
-  color: #fff; /* White text */
-  padding: 20px 0; /* Adjusted padding to control vertical spacing */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  font-family: 'Inter', sans-serif;
-  position: fixed; /* Fix the header to the top */
+  height: 80px;
+  background: rgb(7, 7, 8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(243, 243, 243, 0);
+  position: fixed;
   top: 0;
-  width: 100%; /* Ensure it spans the full width */
-  z-index: 1000; /* Ensure it stays on top of other elements */
-  overflow: hidden; /* To clip the glowing effect */
+  width: 101%;
+  z-index: 1000;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1500px;
+  height: 100%;
   margin: 0 auto;
-  padding: 0 20px; /* Add padding only to the left and right */
-  width: 100%; /* Ensure the container spans the entire width */
-  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  padding: 0 2rem;
 }
 
 .title {
-  
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: left;
-  text-transform: capitalize;
-  color: white;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
   text-decoration: none;
-  margin-left: 0; /* No extra margin */
-  flex: 1; /* Ensure it stays aligned to the left */
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  letter-spacing: 0.5px;
 }
 
 .title:hover {
-  color: #ffeb3b; /* Change color on hover */
+  opacity: 0.9;
 }
 
 .nav {
@@ -52,95 +39,212 @@
 .navLinks {
   list-style: none;
   display: flex;
-  margin-right: 20px;
-}
-
-.navLinks li {
-  margin: 0 20px; /* Equal padding between nav items */
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
-  font-family: 'Inter', sans-serif; /* Ensure links use the same font */
+  transition: all 0.2s;
+  font-size: 0.9375rem;
+  letter-spacing: 0.3px;
 }
 
 .link:hover {
-  color: #ffeb3b; /* Highlight color on hover */
+  color: #ffffff;
+}
+
+.walletActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .ctaBtn {
-  background-color: #ff3f20; /* Button color */
-  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
   border: none;
-  border-radius: 12px;
-  padding: 15px 30px; /* Increased button size */
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  letter-spacing: 0.3px;
 }
 
-.ctaBtn:hover {
-  color: #fcfcfc;
-  background-color: #cd0505; /* Darker shade on hover */
-  transform: translateY(-2px);
-}
-
-.ctaBtn:active {
-  transform: translateY(1px);
+.metamaskIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .activebtn {
-  background-color: #4caf50; /* Green when connected */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.activebtn:hover {
+  background: rgb(63, 170, 68);
 }
 
 .inactivebtn {
-  color: black;
-  background-color: #fcfcfc; /* Red when not connected */
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-section {
+.inactivebtn:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.disconnectBtn {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.3px;
 }
 
-.main-section img {
-  max-width: 400px; /* Adjust to ensure images aren't too big */
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.disconnectBtn:hover {
+  background: rgb(210, 81, 81);
 }
 
-.hero-content {
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobileMenuBtn:hover {
+  transform: scale(1.1);
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: rgb(7, 7, 8);
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileNavLinks li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  transition-delay: calc(0.1s * var(--item-index));
+}
+
+.open .mobileNavLinks li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileNavLinks li a {
+  display: block;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileWalletActions {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  gap: 40px; /* Added space between content */
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
 }
 
-.hero-text {
-  max-width: 600px;
-  text-align: left;
+.open .mobileWalletActions {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .walletActions {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .ctaBtn span, 
+  .disconnectBtn span {
+    display: block;
+  }
+
+  .ctaBtn, 
+  .disconnectBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 20px; /* Spacing between buttons */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-/* NEW CLASS TO PUSH MAIN CONTENT DOWN */
-.main-content {
-  margin-top: 100px; /* Adjust this value based on the height of your header */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

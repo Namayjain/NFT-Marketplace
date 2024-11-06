@@ -1,67 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 .container {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
-  /* height: 500px; */
-  overflow: auto;
+  overflow: hidden;
   background: linear-gradient(90deg, #070707 0%, #201f1f 100%);
 }
 
 .hero {
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space out items */
-  max-width: 1500px;
-  margin: 0 auto; /* Center align hero section */
-  width: 100%;
-  height: 85vh;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1580px;
+  margin: 0 auto;
+  width: 96%;
+  height: 90vh;
   flex-grow: 1;
   padding: 0 20px;
 }
 
 .textContainer {
-  color: white; /* Set text color */
-  max-width: 600px; /* Limit text container width */
-  margin-top: -70px; /* Added space between text and images */
+  color: white;
+  max-width: 600px;
+  margin-top: -70px;
   margin-right: 80px;
   margin-left: 80px;
-
 }
 
 .card {
   display: flex;
-  background-color: #000; /* Card background */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  overflow: hidden; /* Clip the image */
+  background-color: #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.7s ease, box-shadow 0.7s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 30px rgb(255, 255, 255);
 }
 
 .cardImage {
-  width: 500px; /* Increased width of images */
-  height: auto; /* Maintain aspect ratio */
+  width: 500px;
+  height: 500px;
 }
 
 .heading {
-  font-size: 45px; /* Adjusted font size */
+  font-size: 45px;
   line-height: 1.05;
-  margin-bottom: 1rem; /* Reduced bottom margin */
+  margin-bottom: 1rem;
 }
 
 .description {
-  font-size: 20px; /* Adjusted font size */
+  font-size: 20px;
   line-height: 1.6;
-  margin-bottom: 1.5rem; /* Adjust bottom margin */
+  margin-bottom: 1.5rem;
 }
 
 .btns {
   display: flex;
-  justify-content: space-between; /* Space out buttons evenly */
-  margin-top: 20px; /* Add some space above the buttons */
-  width: 100%; /* Ensure it takes full width */
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .btn {
@@ -73,13 +75,13 @@
   border-radius: 9px;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4); /* Glowing effect */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 .btn:hover {
   background-color: #ff0606;
   color: #fff;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5); /* Enhance glow on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 .buyBtn {
@@ -91,5 +93,54 @@
 .buyBtn:hover {
   background-color: #ffffff;
   color: #000000;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5); /* Enhance glow on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .textContainer {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .cardImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px 24px;
+  }
 }

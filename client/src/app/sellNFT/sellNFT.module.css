@@ -3,10 +3,13 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin-bottom: 10px;
+ 
   overflow: hidden; /* Prevents overflow from video */
 }
 
 .videoBackground {
+  filter: grayscale();
   position: absolute;
   top: 0;
   left: 0;

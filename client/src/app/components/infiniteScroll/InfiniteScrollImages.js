@@ -15,8 +15,8 @@ const InfiniteTechScroll = () => {
     { id: 5, src: "/Solidity.png", alt: "Solidity" },
     { id: 6, src: "/Next.js.png", alt: "Next.js" },
     { id: 7, src: "/React.png", alt: "React" },
-    { id: 8, src: "/blockchain.png", alt: "blockchain" },
-    { id: 9, src: "/Ethereum ETH.png", alt: "Etherium ETH" },
+    { id: 8, src: "/blockchain.png", alt: "Blockchain" },
+    { id: 9, src: "/Ethereum ETH.png", alt: "Ethereum ETH" },
   ];
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const InfiniteTechScroll = () => {
       if (!isHovered) {
         setScrollPosition((prev) => {
           const newPosition = prev + scrollSpeed;
-          const resetPoint = container.scrollWidth / 3; // Adjusted to loop after 1/3 of the width
+          const resetPoint = container.scrollWidth / 3;
           return newPosition >= resetPoint ? 0 : newPosition;
         });
       }
@@ -42,28 +42,31 @@ const InfiniteTechScroll = () => {
   }, [isHovered]);
 
   return (
-    <div className={styles.wrapper}>
-      <div 
-        ref={containerRef}
-        className={styles.scrollContainer}
-        style={{ transform: `translateX(-${scrollPosition}px)` }}  // Corrected to use template literal
-      >
-        {[...technologies, ...technologies, ...technologies].map((tech, index) => (
-          <div
-            key={index}
-            className={styles.imageWrapper}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <Image
-              src={tech.src}
-              alt={tech.alt}
-              width={192}
-              height={192}
-              className={styles.image}
-            />
-          </div>
-        ))}
+    <div>
+      <div className={styles.wrapper}>
+        <div
+          ref={containerRef}
+          className={styles.scrollContainer}
+          style={{ transform: `translateX(-${scrollPosition}px)` }}
+        >
+          {[...technologies, ...technologies, ...technologies].map((tech, index) => (
+            <div
+              key={index}
+              className={styles.imageWrapper}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <Image
+                src={tech.src}
+                alt={tech.alt}
+                width={192}
+                height={192}
+                className={styles.image}
+              />
+              <div className={styles.techName}>{tech.alt}</div> {/* Technology name */}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

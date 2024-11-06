@@ -7,6 +7,7 @@
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   color: #fff;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .bgBlur {
@@ -16,7 +17,7 @@
   right: 0;
   bottom: 0;
   z-index: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15), transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(78, 77, 98, 0.15), transparent 70%);
   animation: rotateBg 20s linear infinite;
 }
 
@@ -118,7 +119,7 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #a855f7;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -137,7 +138,7 @@
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 8px;
-  background: rgba(168, 85, 247, 0.1);
+  background: rgba(237, 236, 239, 0.1);
   color: #a855f7;
   font-weight: 500;
 }
@@ -193,11 +194,11 @@
 .notConnected {
   text-align: center;
   font-size: 1.5rem;
-  color: #a855f7;
+  color: #ffffff;
   padding: 40px;
-  background: rgba(168, 85, 247, 0.1);
+  background: rgba(20, 17, 17, 0.1);
   border-radius: 16px;
-  border: 2px dashed rgba(168, 85, 247, 0.3);
+  border: 2px dashed rgba(254, 146, 6, 0.3);
   animation: pulse 2s infinite;
 }
 

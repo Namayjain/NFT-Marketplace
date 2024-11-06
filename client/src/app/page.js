@@ -1,4 +1,4 @@
-"use client"; // Add this line
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -24,7 +24,7 @@ export default function HomePage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src="/left.png" alt="NFT Art Left" className={styles.cardImage} />
+          <img src="/leftonee.webp" alt="NFT Art Left" className={styles.cardImage} />
         </motion.div>
 
         <div className={styles.textContainer}>
@@ -36,7 +36,7 @@ export default function HomePage() {
           >
             <h1 className={styles.heading}>
               Where Art Meets Innovation, <br />
-              Step into NFTstore!
+              Step into Picasso Palette!
             </h1>
           </motion.div>
 
@@ -47,21 +47,21 @@ export default function HomePage() {
             transition={{ duration: 1, delay: 0.5 }}
             className={styles.description}
           >
-           Discover a world of unique digital assets at our NFT Marketplace,
+            Discover a world of unique digital assets at our NFT Marketplace,
             where artists showcase their creativity and collectors find
-             exclusive treasures. Buy, sell, and trade NFTs securely on
-              the blockchain, transforming how we experience and own art.
-               Join our vibrant community and explore the future of digital 
-               collectibles today!
+            exclusive treasures. Buy, sell, and trade NFTs securely on
+            the blockchain, transforming how we experience and own art.
+            Join our vibrant community and explore the future of digital
+            collectibles today!
           </motion.p>
 
           {/* Buttons Section */}
           <div className={styles.btns}>
             <Link href="/marketplace" className={`${styles.btn} ${styles.buyBtn}`}>
               <motion.div
-                initial = {{opacity : 0, x:50}}
-                animate = {{opacity:1,x:0}}
-                transition={{duration:1}}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -70,11 +70,11 @@ export default function HomePage() {
             </Link>
             <Link href="/sellNFT" className={styles.btn}>
               <motion.div
-                 initial = {{opacity : 0, x:50}}
-                 animate = {{opacity:1,x:0}}
-                 transition={{duration:1}}
-                 whileHover={{ scale: 1.1 }}
-                 whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
                 List Now!
               </motion.div>
@@ -89,13 +89,13 @@ export default function HomePage() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img src="/right.png" alt="NFT Art Right" className={styles.cardImage} />
+          <img src="/rightone.webp" alt="NFT Art Right" className={styles.cardImage} />
         </motion.div>
       </div>
 
       {/* Footer */}
-      <InfiniteScrollImages/>
-      <About/>
+      <InfiniteScrollImages />
+      <About />
       <Footer />
     </div>
   );
